@@ -12,7 +12,7 @@ The SfListView allows you to layout the items like `TabView` in the horizontal d
                 <Label Text="{Binding ContactName}" />
                 <Label Text="{Binding ContactNumber}" />
             </Grid>
-            <syncfusion:SfListView x:Name="listView" ItemTapped="list_ItemTapped" ItemSize="70" ItemsSource="{Binding ContactsInfo}">
+            <syncfusion:SfListView x:Name="listView" Orientation="Horizontal" ItemTapped="list_ItemTapped" ItemSize="70" ItemsSource="{Binding ContactsInfo}">
                 <syncfusion:SfListView.ItemTemplate>
                     <DataTemplate x:Name="ItemTemplate"  x:Key="ItemTemplate" >
                         <ViewCell>
