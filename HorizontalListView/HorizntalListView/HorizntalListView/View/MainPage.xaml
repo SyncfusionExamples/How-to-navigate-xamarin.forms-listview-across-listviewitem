@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ListViewSample"
+             xmlns:listView="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             xmlns:dataSource="clr-namespace:Syncfusion.DataSource;assembly=Syncfusion.DataSource.Portable"
+             x:Class="ListViewSample.MainPage">
+    <ContentPage.Behaviors>
+        <local:Behavior/>
+    </ContentPage.Behaviors>
+    <ContentPage.Content>
+        <Grid x:Name="GridView">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
+            <Label Text="Tap image to expand" BackgroundColor="#d3d3d3" FontSize="Medium"
+                   FontAttributes="Bold" VerticalTextAlignment="Center"/>
+            <Grid BackgroundColor="Bisque" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="30" />
+                </Grid.RowDefinitions>
+                <Image Source="{Binding ContactImage}"
+           VerticalOptions="Center"
+           HorizontalOptions="Center"
+           HeightRequest="200"
+           Grid.Row="0"/>
+                <Label LineBreakMode="NoWrap"
+         TextColor="#474747"
+         Text="{Binding ContactName}" Grid.Row="1" FontSize="20" HorizontalTextAlignment="Center" />
+                <Label Grid.Row="2"
+         TextColor="#474747"
+         LineBreakMode="NoWrap"
+         Text="{Binding ContactNumber}" FontSize="20" HorizontalTextAlignment="Center" />
+            </Grid>
+            <listView:SfListView x:Name="list" Grid.Row="2" 
+                                 SelectionBackgroundColor="#d3d3d3" ItemSize="70" ItemsSource="{Binding contactsinfo}"
+                                 ItemSpacing="0,0,5,0" SelectionMode="Single" Orientation="Horizontal">
+                <listView:SfListView.ItemTemplate>
+                    <DataTemplate x:Name="ItemTemplate">
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Grid x:Name="grid" RowSpacing="5">
+                                    <Image Source="{Binding ContactImage}"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"
+                           HeightRequest="50">
+                                    </Image>
+                                </Grid>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </listView:SfListView.ItemTemplate>
+            </listView:SfListView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
