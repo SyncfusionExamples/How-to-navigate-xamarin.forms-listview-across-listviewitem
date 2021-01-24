@@ -10,8 +10,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Images\GroupCollapse.png" />
-    <None Remove="Images\GroupExpand.png" />
     <None Remove="Images\Image0.png" />
     <None Remove="Images\Image1.png" />
     <None Remove="Images\Image10.png" />
@@ -41,12 +39,9 @@
     <None Remove="Images\Image7.png" />
     <None Remove="Images\Image8.png" />
     <None Remove="Images\Image9.png" />
-    <None Remove="Images\Navigate.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Images\GroupCollapse.png" />
-    <EmbeddedResource Include="Images\GroupExpand.png" />
     <EmbeddedResource Include="Images\Image0.png" />
     <EmbeddedResource Include="Images\Image1.png" />
     <EmbeddedResource Include="Images\Image10.png" />
@@ -76,7 +71,6 @@
     <EmbeddedResource Include="Images\Image7.png" />
     <EmbeddedResource Include="Images\Image8.png" />
     <EmbeddedResource Include="Images\Image9.png" />
-    <EmbeddedResource Include="Images\Navigate.png" />
   </ItemGroup>
 
   <ItemGroup>
